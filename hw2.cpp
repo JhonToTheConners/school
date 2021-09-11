@@ -12,6 +12,7 @@ using namespace std;
 
 
 float calculateTuition();
+/*
 int main()
 {
 	bool more_students = true;
@@ -69,7 +70,16 @@ int main()
 
 	}
 } 
+*/
+int main()
+{
+  srand(time(NULL));
+  for (int i=0; i<100; i++)
+{
+  cout << calculateTuition() << endl;
+}
 
+}
 
 bool isAdmitted(int tournaments_won, int codemon_owned, float donation_percentage)
 {
