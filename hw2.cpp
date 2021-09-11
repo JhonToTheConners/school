@@ -11,7 +11,7 @@ Purpose: Manage the onboarding process of future Codemon Academy students
 using namespace std;
 
 
-float calculateTuition();
+double calculateTuition();
 /*
 int main()
 {
@@ -73,10 +73,15 @@ int main()
 */
 int main()
 {
+  cout.setf(ios::fixed);
+  cout.setf(ios::showpoint);
+  cout.precision(2);
+  float x;
   srand(time(NULL));
   for (int i=0; i<100; i++)
 {
-  cout << calculateTuition() << endl;
+  x = calculateTuition();
+  cout << x << endl;
 }
 
 }
@@ -138,9 +143,9 @@ float calculateDonationProbability(bool has_parents_in_show, float household_inc
 	}
 	return donation_chance;
 }
-float calculateTuition()
+double calculateTuition()
 {
-	float random_float;
-	random_float = (rand()%(950001))+50000;
+	double random_float;
+	random_float = ((rand()%(95000100))+5000000)/100.00;
 	return random_float;
 }
